@@ -1,0 +1,20 @@
+{
+  "projector_only_influence": {
+    "final_train_mean_loss": 0.026911573970377727,
+    "final_val_mean_loss": 0.00065506341913715,
+    "history": {
+      "train_losses": [
+        0.026911573970377727
+      ],
+      "val_losses": [
+        0.00065506341913715
+      ],
+      "mean_influence_scores": [
+        -0.787621009627359
+      ],
+      "mean_sample_weights": [
+        1.1060569604662296
+      ]
+    }
+  }
+}
