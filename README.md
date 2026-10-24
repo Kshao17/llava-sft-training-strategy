@@ -41,7 +41,7 @@ The weighted loss is a weighted average over masked answer tokens, so re-weighti
 relative contribution of each task without changing the overall scale of the loss:
 
 ```
-L = sum_i w_t(i) * sum_j m_ij * l_ij  /  sum_i w_t(i) * sum_j m_ij
+L = \frac{\sum_i w_{t(i)} \sum_j m_{ij} \, \ell_{ij}}{\sum_i w_{t(i)} \sum_j m_{ij}}
 ```
 
 where `l_ij` is the token cross-entropy, `m_ij` the answer-token mask and `w_t(i)` the weight for
