@@ -1,0 +1,28 @@
+# Core JAX stack (install the JAX build that matches your accelerator, e.g. jax[cuda12] or jax[tpu])
+jax
+flax
+optax
+ml_dtypes
+jaxtyping
+
+# Llama model implementation (adapted from Tunix)
+git+https://github.com/google/tunix
+
+# Tokenizer, CLIP vision encoder and data loading
+transformers
+grain
+tensorflow
+tensorflow_datasets
+
+# Model and dataset downloads
+kagglehub
+huggingface_hub
+python-dotenv
+
+# Utilities
+numpy
+Pillow
+requests
+tensorboardX
+ipywidgets
+nest_asyncio
