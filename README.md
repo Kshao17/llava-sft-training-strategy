@@ -1,18 +1,18 @@
 # LLaVA SFT Training Strategy Optimization
 
-Course team project at Brandeis University that reproduces a small-scale version of
+A collaborative project that reproduces a small-scale version of
 [Visual Instruction Tuning (LLaVA)](https://arxiv.org/abs/2304.08485) in JAX/Flax and compares
 training strategies for the supervised fine-tuning (SFT) stage.
 
-The project was split across six groups. Our group (Group 3) studied **how the order and weighting
-of training examples affect multimodal SFT**.
+This repository covers the training-strategy part of the project: **how the order and weighting of
+training examples affect multimodal SFT**.
 
 ## My Contribution
 
 - Implemented the **task-weighted loss** used in the re-weighting experiments: per-example weights
   by task type, combined with target-token masking so that only answer tokens contribute to the loss
   (`train_step_stage2` in `LLaVA_Public.ipynb`).
-- Ran and analyzed the comparison of training strategies against the shared baseline.
+- Explored and evaluated the training strategies below against a shared baseline.
 
 ## Pipeline
 
@@ -56,7 +56,7 @@ the task type of example `i`.
 | Curriculum + loss re-weighting | 0.0242 | 0.00071 |
 | Influence-guided reweighting | 0.0269 | 0.00065 |
 
-Values are those reported in the team's final report. The JSON files in `results/` are the raw
+Values are those reported in the project's final report. The JSON files in `results/` are the raw
 training logs, with per-step training loss for each run.
 
 **Observations**
