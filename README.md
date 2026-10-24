@@ -38,14 +38,7 @@ Training follows LLaVA's two stages, at a smaller scale:
 | Influence-guided reweighting | Examples up-weighted when their gradient aligns with a validation gradient direction, down-weighted when it conflicts; run under a reduced compute budget |
 
 The weighted loss is a weighted average over masked answer tokens, so re-weighting changes the
-relative contribution of each task without changing the overall scale of the loss:
-
-```
-L = \frac{\sum_i w_{t(i)} \sum_j m_{ij} \, \ell_{ij}}{\sum_i w_{t(i)} \sum_j m_{ij}}
-```
-
-where `l_ij` is the token cross-entropy, `m_ij` the answer-token mask and `w_t(i)` the weight for
-the task type of example `i`.
+relative contribution of each task without changing the overall scale of the loss.
 
 ## Results
 
